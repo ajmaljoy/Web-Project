@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership - Lions Gym</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Lions Gym Logo" height="40" class="me-2">
+        <span class="fw-bold text-warning">Lions Gym</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end bg-black text-white" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto text-end">
+            <li class="nav-item"><a class="nav-link fw-bold" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="about.html">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="index.html#contact">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold active" href="membership.html">MEMBERSHIP</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Membership Plans -->
+  <section class="pricing-section">
+    <div class="pricing-container">
+      <!-- Basic Plan -->
+      <div class="pricing-card">
+        <div class="plan-icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>Basic</h3>
+        <p class="price"><span class="currency">$</span> 8 <span class="period">/Week</span></p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> Gym Access</li>
+          <li><i class="fas fa-check"></i> Basic Equipment</li>
+          <li><i class="fas fa-check"></i> Locker Room</li>
+          <li><i class="fas fa-check"></i> Free WiFi</li>
+          <li class="na"><i class="fas fa-times"></i> Personal Training</li>
+          <li class="na"><i class="fas fa-times"></i> Group Classes</li>
+          <li class="na"><i class="fas fa-times"></i> Pool Access</li>
+        </ul>
+        <a href="#" class="choose-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" onclick="document.getElementById('planSelect').value='Basic'">Choose Basic</a>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="pricing-card popular">
+        <div class="ribbon">Most Popular</div>
+        <div class="plan-icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>Premium</h3>
+        <p class="price"><span class="currency">$</span> 14 <span class="period">/Week</span></p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> Everything in Basic</li>
+          <li><i class="fas fa-check"></i> All Equipment</li>
+          <li><i class="fas fa-check"></i> Group Classes</li>
+          <li><i class="fas fa-check"></i> Pool Access</li>
+          <li><i class="fas fa-check"></i> Sauna</li>
+          <li><i class="fas fa-check"></i> Nutrition Consultation</li>
+          <li class="na"><i class="fas fa-times"></i> Personal Training</li>
+        </ul>
+        <a href="#" class="choose-btn black" data-bs-toggle="modal" data-bs-target="#membershipModal" onclick="document.getElementById('planSelect').value='Premium'">Choose Premium</a>
+      </div>
+
+      <!-- Elite Plan -->
+      <div class="pricing-card">
+        <div class="plan-icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>Elite</h3>
+        <p class="price"><span class="currency">$</span> 21 <span class="period">/Week</span></p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> Everything in Premium</li>
+          <li><i class="fas fa-check"></i> Personal Training (2 sessions)</li>
+          <li><i class="fas fa-check"></i> 24/7 Access</li>
+          <li><i class="fas fa-check"></i> Guest Passes (2/Week)</li>
+          <li><i class="fas fa-check"></i> Meal Planning</li>
+          <li><i class="fas fa-check"></i> Priority Booking</li>
+          <li><i class="fas fa-check"></i> Spa Access</li>
+        </ul>
+        <a href="#" class="choose-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" onclick="document.getElementById('planSelect').value='Elite'">Choose Elite</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Form Modal -->
+  <div class="modal fade" id="membershipModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <img src="images/logo.png" alt="Lions Gym Logo" height="40" class="me-2">
+            Your <span class="text-warning">Information</span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col"><input type="text" class="form-control" placeholder="First Name" required></div>
+              <div class="col"><input type="text" class="form-control" placeholder="Last Name" required></div>
+            </div>
+            <div class="row mb-3">
+              <div class="col"><input type="text" class="form-control" placeholder="Gender"></div>
+              <div class="col"><input type="date" class="form-control"></div>
+            </div>
+            <div class="row mb-3">
+              <div class="col"><input type="text" class="form-control" placeholder="Contact Number" required></div>
+              <div class="col"><input type="email" class="form-control" placeholder="Email ID" required></div>
+            </div>
+            <div class="row mb-3">
+              <div class="col"><input type="text" class="form-control" placeholder="Address"></div>
+              <div class="col"><input type="text" class="form-control" placeholder="Suburb"></div>
+            </div>
+            <div class="row mb-3">
+              <div class="col"><input type="text" class="form-control" placeholder="City"></div>
+              <div class="col"><input type="text" class="form-control" placeholder="Pincode"></div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <select id="planSelect" class="form-select">
+                  <option>Basic</option>
+                  <option>Premium</option>
+                  <option>Elite</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col"><input type="date" class="form-control" placeholder="Start Date"></div>
+              <div class="col"><input type="date" class="form-control" placeholder="First Payment Date"></div>
+            </div>
+            <button type="submit" class="btn btn-warning w-100 fw-bold">PAY NOW</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Lions Gym Logo">
+        </div>
+        <p>Your premier destination for fitness and wellness. Transform your body, transform your life.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+          <a href="https://youtu.be/tUykoP30Gb0?si=ysfoVTUZpH4csHxy" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 20 Tawa street, Auckland</p>
+        <p><i class="fas fa-phone"></i> +64 225249483</p>
+        <p><i class="fas fa-envelope"></i> info@lionsfitness.com</p>
+      </div>
+      <div class="footer-hours">
+        <h4>Hours</h4>
+        <p>Mon - Fri: 5:00 AM - 11:00 PM</p>
+        <p>Sat - Sun: 6:00 AM - 10:00 PM</p>
+        <p>24/7 Member Access</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Lions Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/java.js"></script>
+
+</body>
+</html>
